@@ -25,7 +25,6 @@
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
 
-
     <script>
         const data = fetch('https://www.malukuterkini.com/wp-json/wp/v2/posts')
         .then((response) => {
@@ -100,22 +99,20 @@
                                     <li><a href="index.html">Beranda</a></li>
                                     <li><a href="#">Profil</a>
                                         <ul class="dropdown">
-                                            <li><a href="index.html">Visi & Misi</a></li>
-                                            <li><a href="about.html">Sejarah Negeri Roho</a></li>
-                                            <li><a href="about.html">Gambaran Umum</a></li>
-                                            <li><a href="about.html">Perangkat Negeri</a></li>
+                                            <li><a href="#">Sejarah Negeri Roho</a></li>
+                                            <li><a href="#">Perangkat Negeri</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Potensi</a>
                                         <ul class="dropdown">
-                                            <li><a href="index.html">Pertanian</a></li>
-                                            <li><a href="about.html">Pariwisata</a></li>
-                                            <li><a href="about.html">UKM</a></li>
+                                            <li><a href="#">Pertanian</a></li>
+                                            <li><a href="#">Pariwisata</a></li>
+                                            <li><a href="#">UKM</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="data_statistik.php">Data Statistik</a></li>
-                                    <li><a href="about.html">Transparansi Keuangan</a></li>
-                                    <li><a href="#berita">Berita</a></li>
+                                    <li><a href="#">Data Statistik</a></li>
+                                    <li><a href="#">Transparansi Keuangan</a></li>
+                                    <li><a href="#">Berita</a></li>
                                 </ul>
 
                             </div>
@@ -209,6 +206,44 @@
     </section>
     <!-- #####  ##### -->
 
+    <!-- ##### SAMBUTAN ##### -->
+    <section class="testimonial-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="testimonials-slides owl-carousel">
+
+                        <!-- Single Testimonial Slide -->
+                        <div class="single-testimonial-slide">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-6">
+                                    <div class="testimonial-thumb">
+                                        <img src="img/bg-img/13.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="testimonial-content">
+                                        <!-- Section Heading -->
+                                        <div class="section-heading">
+                                            <h2>SAMBUTAN</h2>
+                                            <p>Selamat datang di website Negeri Roho</p>
+                                        </div>
+                                        <p>“Selamat datang di Website Negeri Roho, Kecamatan Wahai, Kabupaten Maluku Tengah. Semoga website ini bermanfaat bagi semua pihak, seiring berkembangnya teknologi informasi dan komunikasi tentunya negeri mulai berbenah dan berinovasi, agar semua informasi mudah dan dapat di akses oleh semua lapisan masyarakat.”</p>
+                                        <div class="testimonial-author-info">
+                                            <h6>Yeter Berasa</h6>
+                                            <p>Kepala Negeri Roho</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### ##### -->
+
     <!-- ##### TENTANG NEGERI ##### -->
     <section class="about-us-area section-padding-100-0">
         <div class="container">
@@ -270,7 +305,7 @@
                         </div>
                         <div class="cf-content">
                             <h2><span class="counter">975</span></h2>
-                            <h6>PENDUDUK</h6>
+                            <h6>Jiwa</h6>
                         </div>
                     </div>
                 </div>
@@ -279,11 +314,11 @@
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="single-cool-fact d-flex align-items-center justify-content-center mb-100">
                         <div class="cf-icon">
-                            <i class="fa fa-home" style="font-size:50px;color:lime;"></i>
+                            <i class="fa fa-street-view" style="font-size:50px;color:lime;"></i>
                         </div>
                         <div class="cf-content">
                             <h2><span class="counter">250</span></h2>
-                            <h6>RUMAH</h6>
+                            <h6>Kepala Keluarga</h6>
                         </div>
                     </div>
                 </div>
@@ -296,7 +331,7 @@
                         </div>
                         <div class="cf-content">
                             <h2><span class="counter">475</span></h2>
-                            <h6>ORANG DEWASA</h6>
+                            <h6>Laki-laki</h6>
                         </div>
                     </div>
                 </div>
@@ -305,11 +340,11 @@
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="single-cool-fact d-flex align-items-center justify-content-center mb-100">
                         <div class="cf-icon">
-                            <i class="fa fa-child" style="font-size:50px;color:lime;"></i>
+                            <i class="fa fa-female" style="font-size:50px;color:lime;"></i>
                         </div>
                         <div class="cf-content">
                             <h2><span class="counter">950</span></h2>
-                            <h6>ANAK-ANAK</h6>
+                            <h6>Perempuan</h6>
                         </div>
                     </div>
                 </div>
@@ -317,122 +352,6 @@
             </div>
         </div>
 
-    </section>
-    <!-- ##### ##### -->
-
-    <!-- ##### SAMBUTAN ##### -->
-    <section class="testimonial-area section-padding-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="testimonials-slides owl-carousel">
-
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-md-6">
-                                    <div class="testimonial-thumb">
-                                        <img src="img/bg-img/13.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="testimonial-content">
-                                        <!-- Section Heading -->
-                                        <div class="section-heading">
-                                            <h2>SAMBUTAN</h2>
-                                            <p>Selamat datang di website Negeri Roho</p>
-                                        </div>
-                                        <p>“Selamat datang di Website Negeri Roho, Kecamatan Wahai, Kabupaten Maluku Tengah. Semoga website ini bermanfaat bagi semua pihak, seiring berkembangnya teknologi informasi dan komunikasi tentunya negeri mulai berbenah dan berinovasi, agar semua informasi mudah dan dapat di akses oleh semua lapisan masyarakat.”</p>
-                                        <div class="testimonial-author-info">
-                                            <h6>Yeter Berasa</h6>
-                                            <p>Kepala Negeri Roho</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### ##### -->
-
-    <!-- ##### BERITA ##### -->
-    <section class="alazea-blog-area section-padding-100-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Section Heading -->
-                    <div class="section-heading text-center">
-                        <a name="berita">
-                        <h2>BERITA NEGERI</h2>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-
-                <!-- Single Blog Post Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-blog-post mb-100">
-                        <div class="post-thumbnail mb-30">
-                            <a href="single-post.html"><img src="img/bg-img/6.jpg" alt=""></a>
-                        </div>
-                        <div class="post-content">
-                            <a href="single-post.html" class="post-title">
-                                <h5 id='artikel'>Artikel</h5>
-                            </a>
-                            <div class="post-meta">
-                                <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 20 Jun 2018</a>
-                                <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Alan Jackson</a>
-                            </div>
-                            <p class="post-excerpt" id="excerpt"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-blog-post mb-100">
-                        <div class="post-thumbnail mb-30">
-                            <a href="single-post.html"><img src="img/bg-img/7.jpg" alt=""></a>
-                        </div>
-                        <div class="post-content">
-                            <a href="single-post.html" class="post-title">
-                                <h5 id='artikel2'>Artikel</h5>
-                            </a>
-                            <div class="post-meta">
-                                <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 20 Jun 2018</a>
-                                <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Christina Aguilera</a>
-                            </div>
-                            <p class="post-excerpt" id="excerpt2"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-blog-post mb-100">
-                        <div class="post-thumbnail mb-30">
-                            <a href="single-post.html"><img src="img/bg-img/8.jpg" alt=""></a>
-                        </div>
-                        <div class="post-content">
-                            <a href="single-post.html" class="post-title">
-                            <h5 id='artikel3'>Artikel</h5>
-                            </a>
-                            <div class="post-meta">
-                                <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 19 Jun 2018</a>
-                                <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Mason Jenkins</a>
-                            </div>
-                            <p class="post-excerpt" id="excerpt3"></p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </section>
     <!-- ##### ##### -->
 
@@ -583,24 +502,27 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/active.js"></script>
 
     <script>
-        var mymap = L.map('mapid').setView([-3.170826, 129.461587], 8);
+        var mymap = L.map('mapid').setView([-2.795289, 129.497849], 16);
 
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
             maxZoom: 18,
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             id: 'mapbox/streets-v11',
             tileSize: 512,
             zoomOffset: -1
         }).addTo(mymap);
 
-        L.circle([-3.170826, 129.461587], {
-            color: 'red',
-            fillColor: '#f03',
-            fillOpacity: 0.5,
-            radius: 500
-        }).addTo(mymap);
+        L.popup()
+        .setLatLng([-2.795289, 129.497849])
+        .setContent("Lokasi Negeri Roho")
+        .openOn(mymap);
+
+        L.polygon([
+            [-2.794100, 129.497430],
+            [-2.795107, 129.499018],
+            [-2.796500, 129.498417],
+            [-2.796875, 129.496218]
+        ]).addTo(mymap);
+
 
     </script>
 </body>
