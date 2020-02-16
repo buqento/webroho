@@ -111,7 +111,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="#">Data Statistik</a></li>
-                                    <li><a href="#">Transparansi Keuangan</a></li>
+                                    <li><a href="keuangan.php">Transparansi Keuangan</a></li>
                                     <li><a href="#">Berita</a></li>
                                 </ul>
 
