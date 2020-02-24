@@ -1,3 +1,4 @@
+<?php include('fun.php');?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,63 +69,7 @@
         </div>
     </div>
 
-    <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
-        <!-- ***** Navbar Area ***** -->
-        <div class="alazea-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
-
-                        <!-- Nav Brand -->
-                        <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
-
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
-                        <!-- Menu -->
-                        <div class="classy-menu">
-
-                            <!-- Close Button -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-
-                            <!-- Navbar Start -->
-                            <div class="classynav">
-                                <ul>
-                                    <li><a href="index.html">Beranda</a></li>
-                                    <li><a href="#">Profil</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Sejarah Negeri Roho</a></li>
-                                            <li><a href="#">Perangkat Negeri</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Potensi</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Pertanian</a></li>
-                                            <li><a href="#">Pariwisata</a></li>
-                                            <li><a href="#">UKM</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Data Statistik</a></li>
-                                    <li><a href="keuangan.php">Transparansi Keuangan</a></li>
-                                    <li><a href="#">Berita</a></li>
-                                </ul>
-
-                            </div>
-                            <!-- Navbar End -->
-                        </div>
-                    </nav>
-
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ##### Header Area End ##### -->
+    <?php include('nav.html');?>
 
     <!-- ##### Hero Area Start ##### -->
     <section class="hero-area">
@@ -181,7 +126,7 @@
                 <div class="col-12">
                     <!-- Section Heading -->
                     <div class="section-heading text-center">
-                        <h2>Visi & Misi</h2>
+                        <h2>VISI & MISI</h2>
                         <p>Visi Negeri Roho tahun 2020-2025 : "Terwujudnya Negeri Roho yang Aman, Damai dan Sejahtera".</p>
                     </div>
 
@@ -304,7 +249,7 @@
                             <i class="fa fa-users" style="font-size:50px;color:lime;"></i>
                         </div>
                         <div class="cf-content">
-                            <h2><span class="counter">975</span></h2>
+                            <h2><span class="counter"><?= getJumlahPenduduk($conn); ?></span></h2>
                             <h6>Jiwa</h6>
                         </div>
                     </div>
@@ -317,7 +262,7 @@
                             <i class="fa fa-street-view" style="font-size:50px;color:lime;"></i>
                         </div>
                         <div class="cf-content">
-                            <h2><span class="counter">250</span></h2>
+                            <h2><span class="counter"><?= getJumlahKepalaKeluarga($conn); ?></span></h2>
                             <h6>Kepala Keluarga</h6>
                         </div>
                     </div>
@@ -330,7 +275,7 @@
                             <i class="fa fa-male" style="font-size:50px;color:lime;"></i>
                         </div>
                         <div class="cf-content">
-                            <h2><span class="counter">475</span></h2>
+                            <h2><span class="counter"><?= getJumlahPendudukByJenkel(1, $conn); ?></span></h2>
                             <h6>Laki-laki</h6>
                         </div>
                     </div>
@@ -343,7 +288,7 @@
                             <i class="fa fa-female" style="font-size:50px;color:lime;"></i>
                         </div>
                         <div class="cf-content">
-                            <h2><span class="counter">950</span></h2>
+                            <h2><span class="counter"><?= getJumlahPendudukByJenkel(2, $conn); ?></span></h2>
                             <h6>Perempuan</h6>
                         </div>
                     </div>

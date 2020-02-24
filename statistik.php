@@ -1,3 +1,6 @@
+<?php
+include('fun.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,10 +22,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
     <script src="node_modules/chart.js/dist/Chart.js"></script>
-    <script
-			  src="https://code.jquery.com/jquery-3.4.1.js"
-			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-			  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="graph_table.js"></script>
 
 </head>
@@ -35,29 +35,139 @@
             <img src="img/core-img/leaf.png" alt="">
         </div>
     </div>
-
     <?php include('nav.html');?>
 
     <!-- ##### STATISTIK PENDUDUK ##### -->
     <section class="cool-facts-area bg-img section-padding-100-0">
         <div class="container">
-
-            <div class="section-heading text-center">
-                <h2>TRANSPARANSI KEUANGAN</h2>
-                <p>Data Transparansi Realisasi Keuangan Negeri</p>
-            </div>
             <div class="row">
                 <div class="col-12">
-                    <canvas id="canvasKeuangan"></canvas>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <table id="tableKeuangan" class="display" width="100%"></table>
-                </div>
-            </div>
-            <hr>
 
+                    <div class="section-heading text-center">
+                        <h2>STATISTIK PENDUDUK</h2>
+                        <p>Data statistik penduduk Negeri Roho</p>
+                    </div>
+                    <div class="row">
+
+                        <!-- Single Cool Facts Area -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="single-cool-fact d-flex align-items-center justify-content-center mb-100">
+                                <div class="cf-icon">
+                                    <i class="fa fa-users" style="font-size:50px;color:#58d68d;"></i>
+                                </div>
+                                <div class="cf-content">
+                                    <h2><span class="counter"><?= getJumlahPenduduk($conn); ?></span></h2>
+                                    <h6>Jiwa</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Cool Facts Area -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="single-cool-fact d-flex align-items-center justify-content-center mb-100">
+                                <div class="cf-icon">
+                                    <i class="fa fa-street-view" style="font-size:50px;color:#58d68d;"></i>
+                                </div>
+                                <div class="cf-content">
+                                    <h2><span class="counter"><?= getJumlahKepalaKeluarga($conn); ?></span></h2>
+                                    <h6>Kepala Keluarga</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Cool Facts Area -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="single-cool-fact d-flex align-items-center justify-content-center mb-100">
+                                <div class="cf-icon">
+                                    <i class="fa fa-male" style="font-size:50px;color:#58d68d;"></i>
+                                </div>
+                                <div class="cf-content">
+                                    <h2><span class="counter"><?= getJumlahPendudukByJenkel(1, $conn); ?></span></h2>
+                                    <h6>Laki-laki</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Cool Facts Area -->
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="single-cool-fact d-flex align-items-center justify-content-center mb-100">
+                                <div class="cf-icon">
+                                    <i class="fa fa-female" style="font-size:50px;color:#58d68d;"></i>
+                                </div>
+                                <div class="cf-content">
+                                    <h2><span class="counter"><?= getJumlahPendudukByJenkel(2, $conn); ?></span></h2>
+                                    <h6>Perempuan</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="section-heading text-center">
+                        <h2>Jenis Kelamin</h2>
+                        <p>Grafik Data Demografi Berdasar Jenis Kelamin</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-9">
+                            <canvas id="canvasJenkel"></canvas>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <table id="tableJeniskelamin" class="display" width="100%"></table>
+                        </div>
+                    </div>
+
+                    <!-- Kelompok Umur -->
+                    <div class="section-heading text-center">
+                        <h2>Kelompok Umur</h2>
+                        <p>Grafik Data Demografi Berdasar Kelompok Umur</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <canvas id="canvasGender"></canvas>
+                        </div>
+                    </div>
+
+
+
+                    <div class="section-heading text-center">
+                        <h2>Agama</h2>
+                        <p>Grafik Data Demografi Berdasar Agama</p>
+                    </div>
+                    <canvas id="canvasAgama"></canvas>
+
+
+                    <div class="section-heading text-center">
+                        <h2>Pekerjaan</h2>
+                        <p>Grafik Data Demografi Berdasar Pekerjaan</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-8">
+                            <canvas id="canvasPekerjaan"></canvas>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <table id="tablePekerjaan" class="display" width="100%"></table>
+                        </div>
+                    </div>
+
+
+
+                    <div class="section-heading text-center">
+                        <h2>Pendidikan</h2>
+                        <p>Grafik Data Demografi Berdasar Pendidikan Sedang Ditempuh</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-8">
+                            <canvas id="canvasPendidikan"></canvas>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <table id="tablePendidikan" class="display" width="100%"></table>
+                        </div>
+                    </div>
+                    <hr>
+
+                </div>
+
+            </div>
         </div>
 
     </section>
@@ -180,7 +290,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/active.js"></script>
     <!-- Data tables -->
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-
 
 </body>
 
